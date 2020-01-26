@@ -5,6 +5,7 @@ html {
     overflow-y: scroll;
 }
 header {
+    text-align:center;
     background: #fff8dc;
 }
 body {
