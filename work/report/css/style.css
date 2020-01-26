@@ -4,7 +4,9 @@
 html {
     overflow-y: scroll;
 }
-
+header {
+    background: #fff;
+}
 body {
     margin: 8px auto;
     background: #fff;
