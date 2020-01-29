@@ -47,3 +47,24 @@ h3 {
     height: 200px;
     background-color: #009e60;
 }
+.france {
+    background-color: #fff;
+}
+
+.france .part1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 200px;
+    background-color: #6600cc;
+}
+
+.france .part2 {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 100px;
+    height: 200px;
+    background-color: #ff0000;
+}
