@@ -38,13 +38,13 @@
  rabbit.style.zIndex = 10000; 
  rabbit.addEventListener('click', addAndPrintScore); 
        /** 
- * A function for displaying the duck in random positions 
+ * A function for displaying the rabbit in random positions 
  **/ 
  function newRabbit() { 
  var newX = Math.floor(Math.random() * (areaWidth-rabbit.width)), 
  newY = Math.floor(Math.random() * (areaHeight-rabbit.height)); 
-   duck.style.left = newX+'px'; 
- duck.style.top = newY+'px'; 
+   rabbit.style.left = newX+'px'; 
+ rabbit.style.top = newY+'px'; 
  area.appendChild(rabbit); 
  } 
        /** 
