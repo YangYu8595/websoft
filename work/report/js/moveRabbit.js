@@ -1,4 +1,4 @@
-  r = document.getElementById("rabbit");
+  var r = document.getElementById("rabbit");
   /*function move(){
     r.style.left = r.style.left + 20 +'px';
   }
