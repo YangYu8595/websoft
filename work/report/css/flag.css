@@ -68,3 +68,24 @@ h3 {
     height: 200px;
     background-color: #ff0000;
 }
+.italy {
+    background-color: #fff;
+}
+
+.italy .part1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 200px;
+    background-color: #669900;
+}
+
+.italy .part2 {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 100px;
+    height: 200px;
+    background-color: #ff0000;
+}
