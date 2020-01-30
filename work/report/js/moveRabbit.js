@@ -5,7 +5,7 @@
     r.style.left = r.offsetLeft + 40 + "px";
     console.log(r.style.left);
   });
-  var timer = 2000;
+  var timer = 5000;
   function disappear(){
     r.style.visibility="hidden";
   }
