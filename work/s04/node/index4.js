@@ -3,22 +3,16 @@ const port = process.env.DBWEBB_PORT || 1337;
 const express = require("express");
 const app = express();
 const routeIndex = require("./route/index.js");
+const routeToday = require("./route/today.js");
 const middleware = require("./middleware/index.js");
 const path = require("path");
 
+app.set("view engine", "ejs");
+
 app.use(express.static(path.join(__dirname, "public")));
 app.use(middleware.logIncomingToConsole);
+app.use("/today",routeToday);
 app.use("/",routeIndex);
-app.use(port,logStartUpDetailsToConsole);
-// Add a route for the path /
-app.get("/", (req, res) => {
-    res.send("Hello World");
-});
-
-// Add a route for the path /about
-app.get("/about", (req, res) => {
-    res.send("About something");
-});
 
 // Start up server and begin listen to requests
 app.listen(port,logStartUpDetailsToConsole);

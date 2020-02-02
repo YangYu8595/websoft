@@ -4,12 +4,14 @@ const express = require("express");
 const app = express();
 const routeIndex = require("./route/index.js");
 const middleware = require("./middleware/index.js");
-const path = require("path");
-
-app.use(express.static(path.join(__dirname, "public")));
+/*
+app.use((req,res,next) => {
+    console.info(`Got request on ${req.path} (${req.method}).`);
+    next();
+});
+*/
 app.use(middleware.logIncomingToConsole);
 app.use("/",routeIndex);
-app.use(port,logStartUpDetailsToConsole);
 // Add a route for the path /
 app.get("/", (req, res) => {
     res.send("Hello World");
@@ -21,6 +23,18 @@ app.get("/about", (req, res) => {
 });
 
 // Start up server and begin listen to requests
+/*
+app.listen(port, () => {
+    console.info(`Server is listening on port ${port}.`);
+
+    // Show which routes are supported
+    console.info("Available routes are:");
+    app._router.stack.forEach((r) => {
+        if (r.route && r.route.path) {
+            console.info(r.route.path);
+        }
+    });
+});*/
 app.listen(port,logStartUpDetailsToConsole);
 /**
 	 * Log app details to console when starting up.
