@@ -5,10 +5,12 @@ const app = express();
 const routeIndex = require("./route/index.js");
 const routeToday = require("./route/today.js");
 const middleware = require("./middleware/index.js");
+const routeLotto = require("./route/lotto.js");
 const path = require("path");
 
 app.set("view engine", "ejs");
 
+app.use("/",routeLotto);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(middleware.logIncomingToConsole);
 app.use("/today",routeToday);
