@@ -18,11 +18,12 @@
 	    schools = JSON.stringify(myJson,null,4);
         });
 	btn.onclick = function(){  
-        var data = document.getElementById('dataBox');
-	for (var i in schools){
-	    if(schools[i].Skolenhetsnamn == "Komvux"){
-	        
-        	data.innerHTML = schools[i];
+            var data = document.getElementById('dataBox');
+	    for (var i in schools){
+	        if(schools[i].Skolenhetsnamn == "Komvux"){
+	      
+               	    data.innerHTML = schools[i];
+	        }
 	    }
  	}  
    /* url = "https://rem.dbwebb.se/api/users";
