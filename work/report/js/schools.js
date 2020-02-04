@@ -10,6 +10,7 @@
             return response.json();
         })
         .then((myJson) => {
+	    $("#dataBox").text(JSON.stringify(myJson, null, 4));
             console.log(myJson);
         });
 
