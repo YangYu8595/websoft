@@ -15,7 +15,11 @@
 	    //data.innerHTML = JSON.stringify(myJson,null,4);
 		//$("#dataBox").text(JSON.stringify(myJson, null, 4));
             console.log(myJson);
-	    schools = JSON.stringify(myJson,null,4);
+	    myJson.Skolenheter = myJson.Skolenheter.filter(function(a){
+		return a.Skolenhetsnamn ==="Komvux";
+	    });
+	    schools = myJson;
+
         });
 	btn.onclick = function(){  
             var data = document.getElementById('dataBox');
@@ -23,7 +27,7 @@
 		//if (a.Skolenhetsnamn == "Komvux"){
 	        return a.Skolenhetsnamn ==="Komvux";
 	    });
-            data.innerHTML = schools;
+            data.innerHTML = JSON.stringify(schools,0,4);
  	}  
    /* url = "https://rem.dbwebb.se/api/users";
     fetch(url)
