@@ -19,10 +19,11 @@
         });
 	btn.onclick = function(){  
         var data = document.getElementById('dataBox');
-	schools.Skolenheter = $.grep(schools.Skolenheter,function(item){ 
-   	    return item.Skolenhetsnamn=='Saxemaraskolan';
-	});
-        data.innerHTML = schools;
+	for (var i in schools){
+	    if(schools[i].Skolenhetsnamn == "Komvux"){
+	        
+        	data.innerHTML = schools[i];
+	    }
  	}  
    /* url = "https://rem.dbwebb.se/api/users";
     fetch(url)
