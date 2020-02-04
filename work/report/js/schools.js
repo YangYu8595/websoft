@@ -19,6 +19,9 @@
         });
 	btn.onclick = function(){  
         var data = document.getElementById('dataBox');
+	schools.Skolenheter = $.grep(schools.Skolenheter,function(item){ 
+   	    return item.Skolenhetsnamn=='Saxemaraskolan';
+	});
         data.innerHTML = schools;
  	}  
    /* url = "https://rem.dbwebb.se/api/users";
