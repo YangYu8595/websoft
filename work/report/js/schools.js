@@ -15,7 +15,7 @@
 	    //data.innerHTML = JSON.stringify(myJson,null,4);
 		//$("#dataBox").text(JSON.stringify(myJson, null, 4));
             console.log(myJson);
-	    schools = JOSN.stringify(myJson,null,4);
+	    schools = JSON.stringify(myJson,null,4);
         });
 	btn.onclick = function(){  
         var data = document.getElementById('dataBox');
