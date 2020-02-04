@@ -19,12 +19,11 @@
         });
 	btn.onclick = function(){  
             var data = document.getElementById('dataBox');
-	    for (var i in schools){
-	        if(schools[i].Skolenhetsnamn == "Komvux"){
-	      
-               	    data.innerHTML = schools[i];
-	        }
-	    }
+	    schools.Skolenheter = schools.Skolenheter.filter(function (a){
+		//if (a.Skolenhetsnamn == "Komvux"){
+	        return a.Skolenhetsnamn ==="Komvux";
+	    });
+            data.innerHTML = schools;
  	}  
    /* url = "https://rem.dbwebb.se/api/users";
     fetch(url)
