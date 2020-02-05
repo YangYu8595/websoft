@@ -27,7 +27,7 @@
 		//if (a.Skolenhetsnamn == "Komvux"){
 	        return a.Skolenhetsnamn ==="Komvux";
 	    });
-            data.innerHTML = JSON.stringify(schools,0,4);
+            data.innerHTML = JSON.stringify(schools.Skolenheter,0,4);
  	}  
    /* url = "https://rem.dbwebb.se/api/users";
     fetch(url)
