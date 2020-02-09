@@ -21,11 +21,16 @@ Here are the slideshows.
 * [Course introduction](s00-01-course_introduction)
 * [S01: Web Application Development](s01-01-web_application_development)
 * [S02: HTML, CSS, JavaScript](s02-01-HTML-CSS-JavaScript)
+* [S03: JavaScript Core](s03-01-JavaScript_core)
+* [S04: Node.js](s04-01-Nodejs)
+* S06: JavaScript and PHP frameworks
+    * [PHP frameworks](s06-01-PHP_frameworks)
+    * [JavaScript frameworks](s06-02-JavaScript_frameworks)
+* S07: ASP.NET and Model View Controller (MVC)
+    * [.NET Core](s07-01-dotnet_core)
 
 <!--
-* [S02: JavaScript](s02-03-JavaScript)
-* [S03: JavaScript and Document Object Model (DOM)](s03-01-JavaScript_and_DOM)
-* [S03: JavaScript and Fetch (AJAX)](s03-02-JavaScript_and_Fetch)
+* [ASP.NET Core](s08-01-asp_dotnet_core)
 -->
 
 
