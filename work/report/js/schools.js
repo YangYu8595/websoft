@@ -27,15 +27,15 @@
 		//if (a.Skolenhetsnamn == "Komvux"){
 	        return a.Skolenhetsnamn ==="Komvux";
 	    });
-	    var data = schools.data;
-	    for (var i = 0; i < data.length; i ++){
+	    var datas = schools.data;
+	    for (var i = 0; i < datas.length; i ++){
 		var row = table.insertRow(table.rows.length);
 		var C1 = row.insertCell(0);
-		C1.innerHTML = data[i].id; 
+		C1.innerHTML = datas[i].id; 
  		var c2=row.insertCell(1); 
- 		c2.innerHTML=data[i].firstName; 
+ 		c2.innerHTML=datas[i].firstName; 
  		var c3=row.insertCell(2); 
- 		c3.innerHTML=data[i].lastName;
+ 		c3.innerHTML=datas[i].lastName;
 	    }
             data.innerHTML = JSON.stringify(schools.Skolenheter,0,4);
  	}  
