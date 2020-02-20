@@ -31,11 +31,11 @@
 	    for (var i = 0; i < datas.length; i ++){
 		var row = table.insertRow(table.rows.length);
 		var C1 = row.insertCell(0);
-		C1.innerHTML = datas[i].id; 
+		C1.innerHTML = datas[i].Skolenhetskod; 
  		var c2=row.insertCell(1); 
- 		c2.innerHTML=datas[i].firstName; 
+ 		c2.innerHTML=datas[i].Skolenhetsnamn; 
  		var c3=row.insertCell(2); 
- 		c3.innerHTML=datas[i].lastName;
+ 		c3.innerHTML=datas[i].Kommunkod;
 	    }
             data.innerHTML = JSON.stringify(schools.Skolenheter,0,4);
  	}  
