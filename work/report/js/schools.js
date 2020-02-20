@@ -4,6 +4,7 @@
     let url;
     var btn = document.getElementById("button");
     var schools;
+    var datas:
     //url = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081";
     url = "data/1081.json";
     fetch(url)
@@ -18,6 +19,7 @@
 	    myJson.Skolenheter = myJson.Skolenheter.filter(function(a){
 		return a.Skolenhetsnamn ==="Komvux";
 	    });
+	    datas = myJson.data;
 	    schools = myJson;
 
         });
@@ -27,7 +29,7 @@
 		//if (a.Skolenhetsnamn == "Komvux"){
 	        return a.Skolenhetsnamn ==="Komvux";
 	    });
-	    var datas = schools.data;
+	    
 	    for (var i = 0; i < datas.length; i ++){
 		var row = table.insertRow(table.rows.length);
 		var C1 = row.insertCell(0);
