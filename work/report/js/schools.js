@@ -39,7 +39,7 @@
  		c2.innerHTML=datas.Skolenhetsnamn; 
  		var c3=row.insertCell(2); 
  		c3.innerHTML=datas.Kommunkod;
-	    }
+	    //}
             data.innerHTML = JSON.stringify(schools.Skolenheter,0,4);
  	}  
 
