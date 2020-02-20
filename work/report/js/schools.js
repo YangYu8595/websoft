@@ -19,7 +19,7 @@
 	    myJson.Skolenheter = myJson.Skolenheter.filter(function(a){
 		return a.Skolenhetsnamn ==="Komvux";
 	    });
-	    datas = myJson;
+	    datas = myJson.Skolenheter;
 	    schools = myJson;
 
         });
