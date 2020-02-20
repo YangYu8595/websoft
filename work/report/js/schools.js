@@ -34,11 +34,11 @@
 		var row = table.insertRow(1);
 		//var row = table.insertRow(table.rows.length);
 		var C1 = row.insertCell(0);
-		C1.innerHTML = datas.Skolenhetskod; 
+		C1.innerHTML = datas[0].Skolenhetskod; 
  		var c2=row.insertCell(1); 
- 		c2.innerHTML=datas.Skolenhetsnamn; 
+ 		c2.innerHTML=datas[0].Skolenhetsnamn; 
  		var c3=row.insertCell(2); 
- 		c3.innerHTML=datas.Kommunkod;
+ 		c3.innerHTML=datas[0].Kommunkod;
 	    //}
             data.innerHTML = JSON.stringify(schools.Skolenheter,0,4);
  	}  
