@@ -20,6 +20,7 @@
 		return a.Skolenhetsnamn ==="Komvux";
 	    });
 	    datas = myJson.Skolenheter;
+		console.log(datas);
 	    schools = myJson;
 
         });
