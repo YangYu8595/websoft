@@ -27,7 +27,7 @@
 		var row = table.insertRow(table.rows.length);
 		//var row = table.insertRow(table.rows.length);
 		var C1 = row.insertCell(0);
-		C1.innerHTML = data[0].Skolenhetskod; 
+		C1.innerHTML = data.Skolenhetskod; 
  		var c2=row.insertCell(1); 
  		c2.innerHTML=data[0].Skolenhetsnamn; 
  		var c3=row.insertCell(2); 
