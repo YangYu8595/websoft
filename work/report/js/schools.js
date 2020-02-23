@@ -16,12 +16,12 @@
 	    //data.innerHTML = JSON.stringify(myJson,null,4);
 		//$("#dataBox").text(JSON.stringify(myJson, null, 4));
             console.log(myJson);
+	    schools = myJson;
 	    myJson.Skolenheter = myJson.Skolenheter.filter(function(a){
 		return a.Skolenhetsnamn ==="Komvux";
 	    });
 	    datas = myJson.Skolenheter;
-		console.log(datas);
-	    schools = myJson;
+	    
 
         });
 	btn.onclick = function(){  
@@ -35,11 +35,11 @@
 		var row = table.insertRow(1);
 		//var row = table.insertRow(table.rows.length);
 		var C1 = row.insertCell(0);
-		C1.innerHTML = datas[0].Skolenhetskod; 
+		C1.innerHTML = schools[0].Skolenhetskod; 
  		var c2=row.insertCell(1); 
- 		c2.innerHTML=datas[0].Skolenhetsnamn; 
+ 		c2.innerHTML=schools[0].Skolenhetsnamn; 
  		var c3=row.insertCell(2); 
- 		c3.innerHTML=datas[0].Kommunkod;
+ 		c3.innerHTML=schools[0].Kommunkod;
 	    //}
             data.innerHTML = JSON.stringify(schools.Skolenheter,0,4);
  	}  
