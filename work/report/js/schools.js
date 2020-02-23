@@ -5,8 +5,8 @@
     var btn = document.getElementById("button");
     var schools;
     var datas;
-    url = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081";
-    //url = "data/1081.json";
+    //url = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081";
+    url = "data/1081.json";
     fetch(url)
         .then((response) => {
             return response.json();
