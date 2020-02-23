@@ -29,11 +29,11 @@
 		var C1 = row.insertCell(0);
 		C1.innerHTML = data.Skolenhetskod; 
  		var c2=row.insertCell(1); 
- 		c2.innerHTML=data[0].Skolenhetsnamn; 
+ 		c2.innerHTML=data.Skolenhetsnamn; 
  		var c3=row.insertCell(2); 
- 		c3.innerHTML=data[0].Kommunkod;
+ 		c3.innerHTML=data.Kommunkod;
 		var c4 = row.insertCell(3);
-		c4.innerHTML = data[0].PeOrgNr;
+		c4.innerHTML = data.PeOrgNr;
 	    //}
             
  	}  
