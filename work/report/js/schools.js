@@ -32,7 +32,7 @@
 	    });
 	    var table = document.getElementById("table");
 	    //for (var i = 0; i < datas.length; i ++){
-		var row = table.insertRow(1);
+		var row = table.insertRow(3);
 		//var row = table.insertRow(table.rows.length);
 		var C1 = row.insertCell(0);
 		C1.innerHTML = schools[0].Skolenhetskod; 
