@@ -18,10 +18,10 @@
             console.log(myJson);
 	    btn.onclick = function(){  
             var data = document.getElementById('dataBox');
-	    schools.Skolenheter = schools.Skolenheter.filter(function (a){
+	    /*schools.Skolenheter = schools.Skolenheter.filter(function (a){
 		//if (a.Skolenhetsnamn == "Komvux"){
 	        return a.Skolenhetsnamn ==="Komvux";
-	    });
+	    });*/
 	    var table = document.getElementById("table");
 	    //for (var i = 0; i < datas.length; i ++){
 		var row = table.insertRow(table.rows.length);
