@@ -27,13 +27,13 @@
 		var row = table.insertRow(table.rows.length);
 		//var row = table.insertRow(table.rows.length);
 		var C1 = row.insertCell(0);
-		C1.innerHTML = data.Skolenhetskod; 
+		C1.innerHTML = myJson[0].Skolenhetskod; 
  		var c2=row.insertCell(1); 
- 		c2.innerHTML=data.Skolenhetsnamn; 
+ 		c2.innerHTML=myJson[0].Skolenhetsnamn; 
  		var c3=row.insertCell(2); 
- 		c3.innerHTML=data.Kommunkod;
+ 		c3.innerHTML=myJson[0].Kommunkod;
 		var c4 = row.insertCell(3);
-		c4.innerHTML = data.PeOrgNr;
+		c4.innerHTML = myJson[0].PeOrgNr;
 	    //}
             
  	}  
