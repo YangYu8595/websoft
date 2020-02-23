@@ -40,6 +40,8 @@
  		c2.innerHTML=schools[0].Skolenhetsnamn; 
  		var c3=row.insertCell(2); 
  		c3.innerHTML=schools[0].Kommunkod;
+		var c4 = row.insertCell(3);
+		c4.innerHTML = schools[0].PeOrgNr;
 	    //}
             data.innerHTML = JSON.stringify(schools.Skolenheter,0,4);
  	}  
