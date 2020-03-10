@@ -23,7 +23,7 @@
 	                  return a.Skolenhetsnamn ==="Komvux";
                  }
 	           });
-             myJson = myJson.Skoleheter;
+             
              console.log(myJson);
 	    var table = document.getElementById("table");
 	    //for (var i = 0; i < datas.length; i ++){
