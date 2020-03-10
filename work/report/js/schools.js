@@ -23,6 +23,7 @@
 	                  return a.Skolenhetsnamn ==="Komvux";
                  }
 	           });
+             delete myJson.Uttagsdatum;
              delete myJson.Fotnot;
              console.log(myJson);
 	    var table = document.getElementById("table");
