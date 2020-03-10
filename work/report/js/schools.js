@@ -18,13 +18,13 @@
 
 	    btn.onclick = function(){
              var data = document.getElementById('dataBox');
-	           myJson.Skolenheter = myJson.Skolenheter.filter(function (a){
-		             if (a.Skolenhetsnamn == "Komvux"){
-	                  return a.Skolenhetsnamn ==="Komvux";
-                 }
-	           });
-             delete myJson.Uttagsdatum;
-             delete myJson.Fotnot;
+	           // myJson.Skolenheter = myJson.Skolenheter.filter(function (a){
+		         //     if (a.Skolenhetsnamn == "Komvux"){
+	           //        return a.Skolenhetsnamn ==="Komvux";
+             //     }
+	           // });
+             // delete myJson.Uttagsdatum;
+             // delete myJson.Fotnot;
              console.log(myJson);
 	    var table = document.getElementById("table");
 	    //for (var i = 0; i < datas.length; i ++){
@@ -40,9 +40,9 @@
 
 		var row = table.insertRow(table.rows.length);
 		var C1 = row.insertCell(0);
-		C1.innerHTML = myJson.Skolenheter.Skolenhetskod;
+		C1.innerHTML = myJson.Skolenheter[0].Skolenhetskod;
  		var c2=row.insertCell(1);
- 		c2.innerHTML=myJson.Skolenheter.Skolenhetsnamn;
+ 		c2.innerHTML=myJson.Skolenheter[0].Skolenhetsnamn;
  		var c3=row.insertCell(2);
  		c3.innerHTML=myJson.Skolenheter[0].Kommunkod;
 		var c4 = row.insertCell(3);
