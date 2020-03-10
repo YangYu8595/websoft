@@ -18,9 +18,9 @@ app.get("/", (req, res) => {
 });
 
 // Add a route for the path /about
-app.get("/about", (req, res) => {
-    res.send("About something");
-});
+// app.get("/about", (req, res) => {
+//     res.send("About something");
+// });
 
 // Start up server and begin listen to requests
 /*
@@ -51,7 +51,7 @@ function logStartUpDetailsToConsole() {
             // Routes registered directly on the app
             routes.push(middleware.route);
         } else if(middleware.name === "router") {
-            // Routes added as router middleware 
+            // Routes added as router middleware
             middleware.handle.stack.forEach((handler) => {
                 let route;
 
