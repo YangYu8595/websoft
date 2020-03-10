@@ -6,11 +6,13 @@ const routeIndex = require("./route/index.js");
 const routeToday = require("./route/today.js");
 const middleware = require("./middleware/index.js");
 const routeLotto = require("./route/lotto.js");
+const routeLottoJson = require("./route/lotto-json.js");
 const path = require("path");
 
 app.set("view engine", "ejs");
 
 app.use("/",routeLotto);
+app.use("/",routeLottoJson);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(middleware.logIncomingToConsole);
 app.use("/today",routeToday);
@@ -33,7 +35,7 @@ function logStartUpDetailsToConsole() {
             // Routes registered directly on the app
             routes.push(middleware.route);
         } else if(middleware.name === "router") {
-            // Routes added as router middleware 
+            // Routes added as router middleware
             middleware.handle.stack.forEach((handler) => {
                 let route;
 
