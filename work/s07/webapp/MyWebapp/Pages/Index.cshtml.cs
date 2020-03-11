@@ -15,20 +15,20 @@ namespace MyWebapp.Pages
         private readonly ILogger<IndexModel> _logger;
         public JsonFileAccountService AccountService;
 
-	public IEnumerable<Account> Accounts {
+	      public IEnumerable<Account> Accounts {
             get;
-	    private set;
+	          private set;
         }
 
         public IndexModel(ILogger<IndexModel> logger, JsonFileAccountService accountService)
         {
             _logger = logger;
-	    AccountService = accountService;
+	          AccountService = accountService;
         }
 
         public void OnGet()
         {
-	    Accounts = AccountService.GetAccounts();
+	          Accounts = AccountService.GetAccounts();
         }
     }
 }

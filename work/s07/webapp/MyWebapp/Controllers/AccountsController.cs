@@ -6,25 +6,36 @@ using MyWebapp.Services;
 namespace MyWebapp.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     public class AccountsController : ControllerBase
     {
         public AccountsController(JsonFileAccountService accountService){
             AccountService = accountService;
         }
-	
-    
+
+
 
         public JsonFileAccountService AccountService { get; }
 
-        [HttpGet]
-        public IEnumerable<Account> Get()
+        [HttpGet("api/accounts")]
+        public IActionResult Get()
         {
-	        return AccountService.GetAccounts();
+	           return Ok(AccountService.GetAccounts());
         }
-	public IEnumerable<Account> Get(int id)
-	{
-                return AccountService.GetOneAccount(id);
+        [HttpGet("api/account/{number}")]
+	      public IActionResult Get(string number)
+	      {
+             int id = int.Parse(number);
+             IEnumerable<Account> accounts = AccountService.GetAccounts();
+             foreach(Account account in accounts){
+               if(account.Number == id){
+                 return Ok(account);
+               }
+             }
+             return NotFound(new { Error = "Account number " + number + " is not found" });
+
+
+
         }
 
     }
