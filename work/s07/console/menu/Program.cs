@@ -81,7 +81,7 @@ namespace menu
             string strOwner = "Owner";
             string strBalance = "Balance";
 
-            var tablehead = $"|{strNum.PadRight(15)} |{strBalance}| {strLabel.PadLeft(10)}| {strOwner.PadLeft(10)}|";
+            var tablehead = $"|{strNum.PadRight(13)}|{strBalance.PadRight(13)}|{strLabel.PadRight(13)}|{strOwner.PadRight(13)}|";
 
             Console.WriteLine(tablehead);
             Console.WriteLine("==========================================================");
@@ -91,7 +91,7 @@ namespace menu
         private static void CreateTableRow(Account account)
         {
             Console.WriteLine(account.Display());
-            Console.WriteLine("__________________________________________________________");
+            Console.WriteLine("==========================================================");
             Console.WriteLine();
         }
 
@@ -161,7 +161,7 @@ namespace menu
         }
         public string Display()
         {
-            return $"|{Number.ToString().PadRight(15)} |{Balance:00.00}|  {Label.PadLeft(10)}| {Owner.ToString().PadLeft(10)}| ";
+            return $"|{Number.ToString().PadRight(13)}|{Balance.ToString().PadRight(13)}|{Label.PadRight(13)}|{Owner.ToString().PadRight(13)}|";
         }
     }
 }
