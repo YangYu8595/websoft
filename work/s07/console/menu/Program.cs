@@ -4,6 +4,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Collections.Generic;
 
+
 namespace menu
 {
     class Program
@@ -16,7 +17,7 @@ namespace menu
                 showMenu = MainMenu();
             }
         }
-	private static bool MainMenu()
+	      private static bool MainMenu()
         {
             //Console.Clear();
             Console.WriteLine("Choose an option:");
@@ -39,12 +40,14 @@ namespace menu
                     return true;
             }
         }
-	private static void ViewAccounts()
+	      private static void ViewAccounts()
         {
-	    var accounts = ReadAccounts();
-	    foreach (var account in accounts){
-                Console.WriteLine(account);
+	         var accounts = ReadAccounts();
+           CreateTableHead();
+	         foreach (var account in accounts){
+                CreateTableRow(account);
             }
+            //GetNextSteps("View All","Search All Accounts.");
             //Console.Write("Enter the string you want to modify: ");
             //return Console.ReadLine();
         }
@@ -52,20 +55,44 @@ namespace menu
         private static void ViewAccountById()
         {
             //Console.Clear();
-	    Console.WriteLine("Please enter your number");
-	    var number = Console.ReadLine();
-	    int data = Convert.ToInt32(number);
-	    var accounts = ReadAccounts();
-	    foreach (var account in accounts){
-		if(account.Number == data){  
-                    Console.WriteLine(account);
-		}
-            }
+	           Console.WriteLine("Please enter your number");
+	           var number = Console.ReadLine();
+	           int data = Convert.ToInt32(number);
+	           var accounts = ReadAccounts();
+             CreateTableHead();
+	           foreach (var account in accounts){
+		             if(account.Number == data){
+                    //Console.WriteLine(account);
+                    CreateTableRow(account);
+		             }
+             }
 
 
             //char[] charArray = CaptureInput().ToCharArray();
             //Array.Reverse(charArray);
             //DisplayResult(String.Concat(charArray));
+        }
+
+        private static void CreateTableHead()
+        {
+            Console.WriteLine("==========================================================");
+            string strNum = "Number";
+            string strLabel = "Label";
+            string strOwner = "Owner";
+            string strBalance = "Balance";
+
+            var tablehead = $"|{strNum.PadRight(15)} |{strBalance}| {strLabel.PadLeft(10)}| {strOwner.PadLeft(10)}|";
+
+            Console.WriteLine(tablehead);
+            Console.WriteLine("==========================================================");
+            Console.WriteLine();
+        }
+
+        private static void CreateTableRow(Account account)
+        {
+            Console.WriteLine(account.Display());
+            Console.WriteLine("__________________________________________________________");
+            Console.WriteLine();
         }
 
         private static void RemoveWhitespace()
@@ -82,7 +109,7 @@ namespace menu
             Console.Write("\r\nPress Enter to return to Main Menu");
             Console.ReadLine();
         }
-	static IEnumerable<Account> ReadAccounts()
+	      static IEnumerable<Account> ReadAccounts()
         {
             String file = "../../../data/account.json";
 
@@ -102,7 +129,7 @@ namespace menu
                 return json;
             }
         }
-	static void SaveAccounts(IEnumerable<Account> accounts)
+	      static void SaveAccounts(IEnumerable<Account> accounts)
         {
             String file = "../data/account.json";
 
@@ -131,6 +158,10 @@ namespace menu
 
         public override string ToString() {
             return JsonSerializer.Serialize<Account>(this);
+        }
+        public string Display()
+        {
+            return $"|{Number.ToString().PadRight(15)} |{Balance:00.00}|  {Label.PadLeft(10)}| {Owner.ToString().PadLeft(10)}| ";
         }
     }
 }
