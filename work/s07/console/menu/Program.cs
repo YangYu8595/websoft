@@ -23,7 +23,9 @@ namespace menu
             Console.WriteLine("Choose an option:");
             Console.WriteLine("1) View accounts");
             Console.WriteLine("2) View account by number");
-            Console.WriteLine("3) Exit");
+            Console.WriteLine("3) Search account by input");
+            Console.WriteLine("4) Transfer money");
+            Console.WriteLine("6) Exit");
             Console.Write("\r\nSelect an option: ");
 
             switch (Console.ReadLine())
@@ -35,6 +37,12 @@ namespace menu
                     ViewAccountById();
                     return true;
                 case "3":
+                    SearchAccount();
+                    return true;
+                case "4":
+                    TransferBalance();
+                    return true;
+                case "6":
                     return false;
                 default:
                     return true;
@@ -46,10 +54,7 @@ namespace menu
            CreateTableHead();
 	         foreach (var account in accounts){
                 CreateTableRow(account);
-            }
-            //GetNextSteps("View All","Search All Accounts.");
-            //Console.Write("Enter the string you want to modify: ");
-            //return Console.ReadLine();
+           }
         }
 
         private static void ViewAccountById()
@@ -66,11 +71,83 @@ namespace menu
                     CreateTableRow(account);
 		             }
              }
+        }
+        public static void SearchAccount(){
+            Console.Write("Please enter your search string\n");
+            string search = Console.ReadLine();
+            var accounts = ReadAccounts();
+            CreateTableHead();
+            if(int.TryParse(search,out int num)){
+              foreach (var account in accounts){
+                if((account.Number == num) || (account.Owner == num)){
+                  CreateTableRow(account);
+                }
+              }
+            }
+            else{
+              foreach(var account in accounts){
+                if(account.Label.Contains(search)){
+                  CreateTableRow(account);
+                }
+              }
+            }
+        }
 
+        public static void TransferBalance(){
+          Console.Write("Please enter the transfer account number\n");
+          string num1 = Console.ReadLine();
+          int number1 = Convert.ToInt32(num1);
+          Account account1 = null;
+          Account account2 = null;
+          var accounts = ReadAccounts();
+          foreach (var account in accounts){
+            if(account.Number == number1){
+              account1 = account;
+              break;
+            }
+          }
+          if(account1 == null){
+            Console.Write("Sorry, the account number is not found\n");
+          }
+          else{
+            Console.Write("Please enter the account number you want to transfer to\n");
+            string num2 = Console.ReadLine();
+            int number2 = Convert.ToInt32(num2);
+            foreach (var account in accounts){
+              if(account.Number == number1){
+                account2 = account;
+                break;
+              }
+            }
+            if(account2 == null){
+              Console.Write("Sorry, the account number is not found\n");
+            }
+            else{
+              Console.Write("Please enter the transfer amount\n");
+              string amount = Console.ReadLine();
+              int balance = Convert.ToInt32(amount);
+              if(balance > account1.Balance){
+                Console.Write("You don't have so much balance\n");
+              }
+              else{
+                foreach (var account in accounts){
+                  if(account.Number == number1){
+                    account.Balance = account.Balance - balance;
+                  }
+                  if(account.Number == number2){
+                    account.Balance = account.Balance + balance;
+                  }
+                }
+                SaveAccounts(accounts);
+                var accountss = ReadAccounts();
+                CreateTableHead();
+                foreach (var account in accountss){
+                     CreateTableRow(account);
+                }
+              }
+            }
+          }
 
-            //char[] charArray = CaptureInput().ToCharArray();
-            //Array.Reverse(charArray);
-            //DisplayResult(String.Concat(charArray));
         }
 
         private static void CreateTableHead()
@@ -131,7 +208,7 @@ namespace menu
         }
 	      static void SaveAccounts(IEnumerable<Account> accounts)
         {
-            String file = "../data/account.json";
+            String file = "../../../data/account.json";
 
             using (var outputStream = File.OpenWrite(file))
             {

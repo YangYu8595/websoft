@@ -12,11 +12,7 @@ namespace MyWebapp.Controllers
         public AccountsController(JsonFileAccountService accountService){
             AccountService = accountService;
         }
-
-
-
         public JsonFileAccountService AccountService { get; }
-
         [HttpGet("api/accounts")]
         public IActionResult Get()
         {
@@ -33,11 +29,6 @@ namespace MyWebapp.Controllers
                }
              }
              return NotFound(new { Error = "Account number " + number + " is not found" });
-
-
-
         }
-
     }
-
 }

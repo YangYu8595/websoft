@@ -3,36 +3,39 @@
 var express = require('express');
 var router  = express.Router();
 
-var flag = true;
 var data;
 var strings;
 var arrs = [];
-var url = window.document.location.href.toString();
-if(url.indexOf("?") != -1){
-   strings = url.split("?")[1];
-   data = strings.split("=")[1];
-   arr = data.split(",");
-}
-else{
-  flag = false;
-}
-
+var reply = new Object;
 var arr = [];
-var json = [];
-for (var i = 0; i < 7; i++){
-   arr[i] = Math.floor(Math.random()*35+1);
-   var row = {};
-   row.id = i;
-   row.number = arr[i];
-   json.push(row);
-}
+var url;
+
+
+
 
 // Add a route for the path /
 router.get('/lotto-json', (req, res) => {
-   res.send(json);
-   res.send(flag);
-    //res.send(Math.floor(Math.random()*35+1));
-
+   for (var i = 0; i < 7; i++){
+      arr[i] = Math.floor(Math.random()*35+1);
+   }
+   reply.drwanNumbers = arr;
+   url= req.url;
+   var matchs = 0;
+   if(url.indexOf("?") != -1){
+      strings = url.split("?")[1];
+      data = strings.split("=")[1];
+      arrs = data.split(",");
+      for(var i = 0; i < arrs.length; i++){
+        for(var j = 0; j < arr.length; j++){
+          if(arr[j]==arrs[i]){
+            matchs++;
+          }
+        }
+      }
+      reply.ownNumbers = arrs;
+      reply.correctNumbers = matchs;
+   }
+   res.json(reply);
 });
 
 module.exports = router;

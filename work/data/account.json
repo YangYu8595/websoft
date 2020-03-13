@@ -1,7 +1,7 @@
 [
   {
     "Number": 111111,
-    "Balance": 9,
+    "Balance": 13,
     "Label": "Salary",
     "Owner": 11
   },
@@ -19,7 +19,7 @@
   },
   {
     "Number": 42,
-    "Balance": 9,
+    "Balance": 5,
     "Label": "Secret",
     "Owner": 42
   }
