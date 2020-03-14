@@ -81,6 +81,6 @@ function fetch2(evt) {
 
 
 
-  console.log('Sandbox is ready!');
+  });
 
 }
