@@ -45,5 +45,5 @@
           opt.text = municipality.Namn; // set the text
           document.getElementById('municipality').appendChild(opt); // add it to the select
       }
-    });
+  })
 ();
