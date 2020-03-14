@@ -11,7 +11,7 @@
 
     btn.onclick = function(){
       //flag.style.visibility = hidden;
-      flag.style.width = 500px;
+      // flag.style.width = 500px;
     }
 
     function drawFlagElfenbenskusten()  {
