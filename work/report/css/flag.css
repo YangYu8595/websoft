@@ -26,6 +26,11 @@ h3 {
     height: 200px;
 }
 
+.flag {
+  background-color: #ffffff;
+  transition-duration: 3s;
+}
+
 .elfenbenskusten {
     background-color: #fff;
 }

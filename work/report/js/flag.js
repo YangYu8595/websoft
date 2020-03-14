@@ -6,9 +6,11 @@
     var flagLink1 = document.getElementById('draw-elfenbenskusten');
     var flagLink2 = document.getElementById('draw-france');
     var flagLink3 = document.getElementById('draw-italy');
+    var btn = document.getElementById("button");
 
-
-
+    btn.onclick = function(){
+      btn.classList.add('flag');
+    }
     function drawFlagElfenbenskusten()  {
         var flagElfenbenskusten = '<div class="flag elfenbenskusten"><div class="part1"></div>' +
         '<div class="part2"></div></div>';
