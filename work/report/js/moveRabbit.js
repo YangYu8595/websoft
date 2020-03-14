@@ -12,7 +12,7 @@
     }
 
   });
-  var timer = 5000;
+  var timer = 3000;
   function disappear(){
     if(r.style.visibility==="visible"){
       r.style.visibility="hidden";
