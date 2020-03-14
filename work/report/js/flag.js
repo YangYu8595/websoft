@@ -11,6 +11,7 @@
 
     btn.onclick = function(){
       flag.style.visibility = hidden;
+      addClass(flag,"flag2");
        // flag.style.width = 500px;
     }
 
