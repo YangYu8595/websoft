@@ -10,13 +10,23 @@
     <div id="content">
 	     <button id = "button" type = "button">Click Me</button>
 	     <p>Click the button above, you will see the school I like</p>
-	     <table id = "table">
+	     <table id = "table" border="1">
 	     </table>
       <h4>Each three seconds, the cute rabbit will disappear or appear ~</h4>
-      <select id="municipality" class="dropdown" onchange="populateTable(event)">
+      <select id="municipality" onchange="fetch2(event)">
         <!-- onchange="populateTable(event)" onclick="startleKangaroo()"> -->
         <option value="0">--choose municipality--</option>
       </select>
+      <table id="table2" border="1">
+        <thead>
+          <tr>
+            <th>Schoolname</th>
+            <th>Schoolcode</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
       <div id = "rabbit" class = "rabbit"></div>
     </div>
     <script src="js/schools.js"></script>
