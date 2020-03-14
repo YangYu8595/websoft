@@ -6,7 +6,8 @@
     //if(r.style.left+ 40 + "px" < b.offsetWidth + "px"){
       r.style.left = r.offsetLeft + 40 + "px";
       console.log(r.style.left);
-      console.log(b.offsetLeft);
+      console.log(r.offsetLeft);
+      console.log(r.style.left+r.offsetWidth);
       console.log(b.offsetLeft + b.offsetWidth);
     //}
 
