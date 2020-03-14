@@ -9,7 +9,7 @@
     var btn = document.getElementById("button");
 
     btn.onclick = function(){
-      btn.classList.add('flag');
+      btn.classList.add('flag2');
     }
     function drawFlagElfenbenskusten()  {
         var flagElfenbenskusten = '<div class="flag elfenbenskusten"><div class="part1"></div>' +

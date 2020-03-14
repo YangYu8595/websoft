@@ -20,16 +20,17 @@ h3 {
     border-radius: 30px;
 }
 
-#flag {
+.flag2 {
+  background-color: #ffffff;
+  transition-duration: 3s;
+}
+
+.flag {
     position: relative;
     width: 300px;
     height: 200px;
 }
 
-.flag {
-  background-color: #ffffff;
-  transition-duration: 3s;
-}
 
 .elfenbenskusten {
     background-color: #fff;
