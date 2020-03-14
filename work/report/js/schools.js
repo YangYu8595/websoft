@@ -17,7 +17,7 @@
 		//$("#dataBox").text(JSON.stringify(myJson, null, 4));
 
 	    btn.onclick = function(){
-             var data = document.getElementById('dataBox');
+             //var data = document.getElementById('dataBox');
 	           // myJson.Skolenheter = myJson.Skolenheter.filter(function (a){
 		         //     if (a.Skolenhetsnamn == "Komvux"){
 	           //        return a.Skolenhetsnamn ==="Komvux";
