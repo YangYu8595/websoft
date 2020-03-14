@@ -1,9 +1,9 @@
+var proxyUrl = "https://cors-anywhere.herokuapp.com/";
 (function () {
     'use strict';
 
     var btn = document.getElementById("button");
-    let url = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081";
-    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+    var url = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081";
     fetch(proxyUrl+url)
         .then((response) => {
             return response.json();
@@ -31,7 +31,7 @@
 	            c4.innerHTML = myJson.Skolenheter[0].PeOrgNr;
 	         }
         });
-        let url2 = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun";
+        var url2 = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun";
         fetch(proxyUrl+url2)
             .then((response) => {
                 return response.json();
@@ -53,8 +53,8 @@ function fetch2(evt) {
   //document.getElementById("loader").style.visibility = "visible";
 
 
-  const url = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/" + evt.target.value;
-  fetch(proxyUrl + url)
+  var url3 = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/" + evt.target.value;
+  fetch(proxyUrl + url3)
     .then((response) => {
       return response.json();
     })
