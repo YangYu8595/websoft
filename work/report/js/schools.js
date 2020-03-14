@@ -60,17 +60,17 @@ function fetch2(evt) {
     })
     .then((myJson) => {
       console.log(myJson);
-      var row = table2.insertRow(table2.rows.length);
-      var c1 = row.insertCell(0);
-      c1.innerHTML = "Skolenhetskod";
-      var c2=row.insertCell(1);
-      c2.innerHTML="Skolenhetsnamn";
+      var row2 = table2.insertRow(table2.rows.length);
+      var C1 = row2.insertCell(0);
+      C1.innerHTML = "Skolenhetskod";
+      var C2=row.insertCell(1);
+      C2.innerHTML="Skolenhetsnamn";
       for (const skola of myJson.Skolenheter) {
-        var row = table.insertRow(table.rows.length);
-        var c1 = row.insertCell(0);
-        c1.innerHTML = myJson.Skolenheter[0].Skolenhetskod;
-        var c2=row.insertCell(1);
-        c2.innerHTML=myJson.Skolenheter[0].Skolenhetsnamn;
+        var row2 = table2.insertRow(table2.rows.length);
+        var C1 = row2.insertCell(0);
+        C1.innerHTML = myJson.Skolenheter[0].Skolenhetskod;
+        var C2=row2.insertCell(1);
+        C2.innerHTML=myJson.Skolenheter[0].Skolenhetsnamn;
       }
       // var old_tbody = table.tBodies[0]
       // var new_tbody = document.createElement('tbody');
