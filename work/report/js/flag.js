@@ -10,7 +10,7 @@
     var flag = document.getElementById("flag");
 
     btn.onclick = function(){
-      // flag.style.visibility = hidden;
+      // sflag.style.visibility = hidden;
       addClass(flag,"flag2");
        // flag.style.width = 500px;
     }

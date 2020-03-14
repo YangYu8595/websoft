@@ -21,8 +21,8 @@ h3 {
 }
 
 .flag2 {
-  background-color: #ffffff;
-  /* visibility:hidden; */
+  /* background-color: #ffffff; */
+    visibility:hidden;
 }
 
 .flag {
