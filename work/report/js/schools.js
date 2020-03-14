@@ -65,12 +65,20 @@ function fetch2(evt) {
       C1.innerHTML = "Skolenhetskod";
       var C2=row2.insertCell(1);
       C2.innerHTML="Skolenhetsnamn";
+      var C3=row2.insertCell(2);
+      C3.innerHTML="Kommunkod";
+      var C4=row2.insertCell(2);
+      C4.innerHTML="PeOrgNr";
       for (const skola of myJson.Skolenheter) {
         var row2 = table2.insertRow(table2.rows.length);
         var C1 = row2.insertCell(0);
-        C1.innerHTML = myJson.Skolenheter[0].Skolenhetskod;
+        C1.innerHTML = skola.Skolenhetskod;
         var C2=row2.insertCell(1);
-        C2.innerHTML=myJson.Skolenheter[0].Skolenhetsnamn;
+        C2.innerHTML=skola.Skolenhetsnamn;
+        var C3 = row2.insertCell(2);
+        C3.innerHTML = skola.Kommunkod;
+        var C4=row2.insertCell(3);
+        C4.innerHTML=skola.PeOrgNr;
       }
       // var old_tbody = table.tBodies[0]
       // var new_tbody = document.createElement('tbody');
