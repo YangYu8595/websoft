@@ -6,6 +6,7 @@
     //if(r.style.left+r.offsetWidth+40 < b.offsetWidth){
       r.style.left = r.offsetLeft + 40 + "px";
       console.log(r.style.left);
+      console.log(b.offsetWidth);
     //}
 
   });
