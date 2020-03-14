@@ -38,6 +38,7 @@
           return response.json();
       })
       .then((myJson) => {
+        console.log(myJson);
         for (var municipality of myJson.Kommuner) {
           var opt = document.createElement("option"); // Create the new element
           opt.value = municipality.Kommunkod; // set the value
