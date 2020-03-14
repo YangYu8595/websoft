@@ -32,6 +32,9 @@ h3 {
     height: 200px;
     transition:visibility 7s linear;
 }
+.flag:visited{
+  visibility:hidden;
+}
 
 
 .elfenbenskusten {
