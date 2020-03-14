@@ -10,11 +10,15 @@
     <h1>My Fetch Page</h1>
     <div id="content">
 	     <button id = "button" type = "button">Click Me</button>
-	      <p>Click the button above, you will see the school I like</p>
-	       <table id = "table">
-	       </table>
-            <h4>Each three seconds, the cute rabbit will disappear or appear ~</h4>
-        <div id = "rabbit" class = "rabbit"></div>
+	     <p>Click the button above, you will see the school I like</p>
+	     <table id = "table">
+	     </table>
+      <h4>Each three seconds, the cute rabbit will disappear or appear ~</h4>
+      <select id="municipality" class="dropdown" onchange="populateTable(event)">
+        <!-- onchange="populateTable(event)" onclick="startleKangaroo()"> -->
+        <option value="0">--choose municipality--</option>
+      </select>
+      <div id = "rabbit" class = "rabbit"></div>
     </div>
     <script src="js/schools.js"></script>
     <script src="js/moveRabbit.js"></script>

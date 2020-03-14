@@ -1,12 +1,9 @@
 (function () {
     'use strict';
 
-    let url;
     var btn = document.getElementById("button");
-    var schools;
-
-    url = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081";
-    //url = "data/1081.json";
+    let url = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081";
+    let url2 = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun";
     fetch(url)
         .then((response) => {
             return response.json();
@@ -35,4 +32,16 @@
 	         }
         });
     console.log('Data is ready!');
-})();
+  })
+  fetch(url2)
+      .then((response) => {
+          return response.json();
+      })
+      .then((myJson) => {
+        for (var municipality of myJson.Kommuner) {
+          var opt = document.createElement("option"); // Create the new element
+          opt.value = municipality.Kommunkod; // set the value
+          opt.text = municipality.Namn; // set the text
+          document.getElementById('municipality').appendChild(opt); // add it to the select
+      }
+();
