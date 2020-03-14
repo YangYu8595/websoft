@@ -3,7 +3,8 @@
 
     var btn = document.getElementById("button");
     let url = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081";
-    fetch(url)
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+    fetch(proxyUrl+url)
         .then((response) => {
             return response.json();
         })
@@ -31,7 +32,7 @@
 	         }
         });
         let url2 = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun";
-        fetch(url2)
+        fetch(proxyUrl+url2)
             .then((response) => {
                 return response.json();
             })
@@ -44,6 +45,4 @@
                 document.getElementById('municipality').appendChild(opt); // add it to the select
             }
         });
-  })
-
-();
+})();
