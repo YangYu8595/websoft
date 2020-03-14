@@ -48,7 +48,7 @@ var proxyUrl = "https://cors-anywhere.herokuapp.com/";
 })();
 
 function fetch2(evt) {
-  var table = document.getElementById('table2');
+  var table2 = document.getElementById('table2');
   console.log(evt.target.value);
   //document.getElementById("loader").style.visibility = "visible";
 
@@ -60,27 +60,28 @@ function fetch2(evt) {
     })
     .then((myJson) => {
       console.log(myJson);
-      var old_tbody = table.tBodies[0]
-      var new_tbody = document.createElement('tbody');
-
+      var row = table2.insertRow(table2.rows.length);
+      var c1 = row.insertCell(0);
+      c1.innerHTML = "Skolenhetskod";
+      var c2=row.insertCell(1);
+      c2.innerHTML="Skolenhetsnamn";
       for (const skola of myJson.Skolenheter) {
-
-        var newRow = new_tbody.insertRow(0) //table.rows.length);
-        var schoolNameCell = newRow.insertCell(0);
-        var schoolCodeCell = newRow.insertCell(1);
-        schoolNameCell.innerHTML = skola.Skolenhetsnamn;
-        schoolCodeCell.innerHTML = skola.Skolenhetskod;
-
+        var row = table.insertRow(table.rows.length);
+        var c1 = row.insertCell(0);
+        c1.innerHTML = myJson.Skolenheter[0].Skolenhetskod;
+        var c2=row.insertCell(1);
+        c2.innerHTML=myJson.Skolenheter[0].Skolenhetsnamn;
       }
-      old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
-      //document.getElementById("loader").style.visibility = "hidden";
-
-      //document.getElementById("loader").innerHTML = "";
-
-    //}).catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"));
-
-
-
+      // var old_tbody = table.tBodies[0]
+      // var new_tbody = document.createElement('tbody');
+      // for (const skola of myJson.Skolenheter) {
+      //   var newRow = new_tbody.insertRow(0) //table.rows.length);
+      //   var schoolNameCell = newRow.insertCell(0);
+      //   var schoolCodeCell = newRow.insertCell(1);
+      //   schoolNameCell.innerHTML = skola.Skolenhetsnamn;
+      //   schoolCodeCell.innerHTML = skola.Skolenhetskod;
+      // }
+      // old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
   });
 
 }
