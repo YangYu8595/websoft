@@ -1,0 +1,56 @@
+<html>
+<head>
+  <link href= "css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <h1 class="lotto_header">Welcome to Lotto!</h1>
+
+      <div class="lotto_wrapper">
+      <table id="draw">
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+        <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+        <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+        <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+        <tr><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td></tr>
+      </table>
+
+      <table id="player">
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+        <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+        <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+        <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+        <tr><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td></tr>
+      </table>
+      </div>
+      <p class="lotto_text">Total matches: <%= matches %>.<p>
+      <script type="text/javascript">
+        var draw = [<%= draw %>];
+        console.log(draw);
+        var table = document.getElementById('draw');
+        var tds = table.getElementsByTagName('td');
+        for (let i = 0; i < tds.length; i++) {
+          for (let j = 0; j < draw.length; j++) {
+            if (tds[i].innerHTML == draw[j]) {
+              tds[i].style.color = 'red';
+            }
+          }
+        }
+        var player = [<%= player %>];
+        console.log(player);
+        var tablePlayer = document.getElementById('player');
+        var tdsPlayer = tablePlayer.getElementsByTagName('td');
+        for (let i = 0; i < tdsPlayer.length; i++) {
+          for (let j = 0; j < player.length; j++) {
+            if (tdsPlayer[i].innerHTML == player[j]) {
+              tdsPlayer[i].style.color = 'white';
+            }
+          }
+        }
+      </script>
+
+    </body>
+    </html>
