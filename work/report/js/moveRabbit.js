@@ -3,11 +3,11 @@
   var r = document.getElementById("rabbit");
   var b = document.getElementById("body");
   r.addEventListener("click",function(){
-    //if(r.style.left+r.offsetWidth+40 < b.offsetWidth){
+    if(r.style.left+r.offsetWidth+ 40 + "px" < b.offsetWidth){
       r.style.left = r.offsetLeft + 40 + "px";
       console.log(r.style.left);
       console.log(b.offsetWidth);
-    //}
+    }
 
   });
   var timer = 5000;
