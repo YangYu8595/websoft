@@ -20,21 +20,21 @@ h3 {
     border-radius: 30px;
 }
 
-.flag2 {
-  /* background-color: #ffffff; */
+/* .flag2 {
+  background-color: #ffffff;
   visibility:hidden;
-}
+} */
 
 .flag {
-    visibility:visible;
+    visibility: visible;
     position: relative;
     width: 300px;
     height: 200px;
-    transition:visibility 7s linear;
+    transition:visibility 3s linear;
 }
-.flag:visited{
+/* .flag:visited{
   visibility:hidden;
-}
+} */
 
 
 .elfenbenskusten {

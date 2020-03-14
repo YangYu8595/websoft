@@ -10,7 +10,7 @@
     var flag = document.getElementById("flag");
 
     btn.onclick = function(){
-      flag.classList.add('flag2');
+      flag.style.visibility = hidden;
     }
     function drawFlagElfenbenskusten()  {
         var flagElfenbenskusten = '<div class="flag elfenbenskusten"><div class="part1"></div>' +
