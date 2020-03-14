@@ -20,7 +20,7 @@ h3 {
     border-radius: 30px;
 }
 
-.flag {
+#flag {
     position: relative;
     width: 300px;
     height: 200px;

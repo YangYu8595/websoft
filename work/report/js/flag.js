@@ -7,7 +7,7 @@
     var flagLink2 = document.getElementById('draw-france');
     var flagLink3 = document.getElementById('draw-italy');
 
-    //myContent.innerHTML = '<h3>This is a MEGA template!</h3>';
+
 
     function drawFlagElfenbenskusten()  {
         var flagElfenbenskusten = '<div class="flag elfenbenskusten"><div class="part1"></div>' +
