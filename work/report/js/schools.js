@@ -3,7 +3,6 @@
 
     var btn = document.getElementById("button");
     let url = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081";
-    let url2 = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun";
     fetch(url)
         .then((response) => {
             return response.json();
@@ -33,6 +32,7 @@
         });
     console.log('Data is ready!');
   })
+  let url2 = "https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun";
   fetch(url2)
       .then((response) => {
           return response.json();
