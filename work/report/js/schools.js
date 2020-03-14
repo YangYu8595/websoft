@@ -63,7 +63,7 @@ function fetch2(evt) {
       var row2 = table2.insertRow(table2.rows.length);
       var C1 = row2.insertCell(0);
       C1.innerHTML = "Skolenhetskod";
-      var C2=row.insertCell(1);
+      var C2=row2.insertCell(1);
       C2.innerHTML="Skolenhetsnamn";
       for (const skola of myJson.Skolenheter) {
         var row2 = table2.insertRow(table2.rows.length);
