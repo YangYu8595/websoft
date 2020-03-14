@@ -22,6 +22,7 @@ h3 {
 
 .flag2 {
   background-color: #ffffff;
+  visibility:hidden;
   transition-duration: 3s;
 }
 
