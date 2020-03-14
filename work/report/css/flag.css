@@ -21,9 +21,9 @@ h3 {
 }
 
 .flag2 {
-  background-color: #ffffff;
-  /* visibility:hidden; */
-  transition:background-color 7s linear;
+  /* background-color: #ffffff; */
+  visibility:hidden;
+  transition:visibility 7s linear;
 }
 
 .flag {
