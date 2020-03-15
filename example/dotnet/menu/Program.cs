@@ -19,7 +19,7 @@ namespace menu
 
         private static bool MainMenu()
         {
-            Console.Clear();
+            //Console.Clear();
             Console.WriteLine("Choose an option:");
             Console.WriteLine("1) Reverse String");
             Console.WriteLine("2) Remove Whitespace");

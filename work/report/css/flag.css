@@ -20,10 +20,7 @@ h3 {
     border-radius: 30px;
 }
 
-
-
 .flag {
-    /* visibility: visible; */
     opacity: 1;
     position: relative;
     width: 300px;
@@ -52,6 +49,7 @@ h3 {
     height: 200px;
     background-color: #009e60;
 }
+
 .france {
     background-color: #fff;
 }
@@ -73,6 +71,7 @@ h3 {
     height: 200px;
     background-color: #ff0000;
 }
+
 .italy {
     background-color: #fff;
 }
